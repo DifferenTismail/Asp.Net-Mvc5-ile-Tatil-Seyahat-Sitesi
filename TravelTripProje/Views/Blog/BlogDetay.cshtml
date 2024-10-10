@@ -36,25 +36,17 @@
                         </p>
                     }
                 </div>
+                @foreach(var y in Model.Deger2) {
                 <ul class="comment-list">
                     <li>
                         <img src="~/web-2/images/avatar.png" class="img-responsive" alt="">
                         <div class="desc">
-                            <p>İsmail Baran KARASU : Yorum Yazacak</p>
+                            <p>@y.KullaniciAdi : @y.Yorum </p>
                         </div>
                         <div class="clearfix"></div>
                     </li>
                 </ul>
-
-                <ul class="comment-list">
-                    <li>
-                        <img src="~/web-2/images/avatar.png" class="img-responsive" alt="">
-                        <div class="desc">
-                            <p>İsmail Baran KARASU : Yorum Yazacak</p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </li>
-                </ul>
+                }
 
                 <div class="content-form">
                     <h3>Bir Yorum Yapın</h3>
