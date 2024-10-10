@@ -11,10 +11,18 @@ namespace TravelTripProje.Controllers
         Context c = new Context();
         public ActionResult Index()
         {
-            
             var degerler = c.Blogs.ToList();
             return View(degerler);
         }
-
+        public PartialViewResult Partial1()
+        {
+            var degerler = c.Blogs.OrderByDescending(x => x.ID).Take(2).ToList();
+            return PartialView(degerler);
+        }
+        public PartialViewResult Partial2()
+        {
+            var deger = c.Blogs.Where(x => x.ID == 1).ToList();
+            return PartialView(deger); 
+        }
     }
 }
