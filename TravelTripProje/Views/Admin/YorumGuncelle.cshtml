@@ -1,0 +1,23 @@
+﻿@model TravelTripProje.Models.Siniflar.Yorumlar
+@{
+    ViewBag.Title = "YorumGuncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<h2>Yorum Güncelle</h2>
+
+<form method="post" class="form-group">
+    @Html.HiddenFor(x => x.ID)
+    @Html.LabelFor(x => x.KullaniciAdi)
+    @Html.TextBoxFor(x => x.KullaniciAdi, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+
+    @Html.LabelFor(x => x.Mail)
+    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+
+    @Html.LabelFor(x => x.Yorum)
+    @Html.TextAreaFor(x => x.Yorum, 15, 50, new { @class = "form-control", @maxlength = "500" })
+    <br />
+    <button class="btn btn-primary">Yorum Güncelle</button>
+</form>

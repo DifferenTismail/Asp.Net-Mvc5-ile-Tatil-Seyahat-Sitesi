@@ -10,7 +10,7 @@
 
             <h4>@x.Baslik</h4>
             <span class="doller">@x.Tarih.ToShortDateString()</span>
-            <p>@(x.Aciklama.Length > 30 ? x.Aciklama.Substring(0, 30) + "..." : x.Aciklama)</p>
+            <p>@(x.Aciklama.Length > 30 ? x.Aciklama.Substring(0, 50) + "..." : x.Aciklama)</p>
             <p><a href="/Blog/BlogDetay/@x.ID"><span class="read">Daha Fazlası >></span></a></p>
         </div>
     </div>
